@@ -1,0 +1,246 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  body{
+  font-family: 'Libre Baskerville', serif;
+  background-color:#b1e0dc;
+  }
+  section {
+    margin: 4rem 0;
+  }
+  .navbar {
+    position:sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9fafc;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+      0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    z-index: 9999;
+  }
+  
+  .navbar__brand {
+    width: 100px;
+    height: 50px;
+  
+  }
+  .brand{
+    display: flex;
+    font-style: italic;
+    color: grey;
+  }
+  .menu-btn{
+    position: relative;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+    transition: all 2s ease-in-out;
+  }
+  .menu-btn-burger{
+    width: 60px;
+    height: 8px;
+    background: black;
+    border-radius: 5px;
+    transition: all 4s ease-in-out;
+  }
+  .menu-btn-burger::before,
+  .menu-btn-burger::after{
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 8px;
+    background: black;
+    border-radius: 5px;
+    transition: all 4s ease-in-out;
+  }
+  .menu-btn-burger::before{
+    transform: translateY(-16px);
+  }
+  .menu-btn-burger::after{
+    transform: translateY(16px);
+  }
+  /* .container{
+  width: 100%;
+  height: 100%;
+  } */
+  .hero__container{
+    padding: 4px;
+    margin: 4px;
+  }
+  .image__combo{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+  }
+  .hero__description{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 8px;
+    width: 100%;
+  }
+  .hero__text{
+    font-weight: 600;
+    color: blueviolet;
+   
+  }
+  .button__primary{
+    background-color: orangered;
+    background-image: linear-gradien(
+      to right,
+      #ff512f 0%,
+      #dd2476 51%,
+      #ff512f 100%,
+    );
+  /* }
+  .button__primary{ */
+    margin: 10px;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    transition: 1s;
+    font-weight: 600;
+    background-size: 200% auto;
+    color:white;
+    border-radius: 4px;
+    display: block;
+  }
+  .button__primary:hover{
+  background-position: right center;
+  color: purple;
+  }
+  .video__footage__container{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .video__footage{
+    position: relative;
+    display: flex;
+    padding: 10px;
+    margin: 5px;
+    width: 100%;
+    height:100%;
+  
+  }
+  .video__footage__text{
+    margin-top: 2rem;
+    color: blue;
+    font-size: 1.25rem;
+    font-weight: 300;
+    text-align: center;
+  }
+  .food__list__container {
+      position: relative;
+      margin: 5rem 0;
+  }
+  
+  .food__menu__card__list {
+      width: 100%;
+  }
+  
+  .food__menu__card__image {
+      border-radius: 6px 6px 0px 0px;
+      width: 100%;
+  }
+  
+  .food__menu__card__details {
+      padding: 1rem;
+      text-align: left;
+      color: black;
+  }
+  
+  .food__menu__card__title {
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+      color: blue;
+      font-weight: 900;
+  }
+  .recommendation__food{
+   /* height: 100%; */
+   width: 100%;
+   background-color: white;
+   border-radius: 8px;
+   padding: 8px;
+  }
+  .dessert_image{
+    height: 100%;
+    width: 100%;
+    border-radius:10px;
+    padding: 8px;
+  }
+  .dessert__text{
+    text-align: center;
+    color: blue;
+  }
+  .footer{
+    color: black;
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  @media(min-width:1200px){
+    .container{
+      max-width:1140px;
+    }
+    .image__combo{
+      width:100%;
+      height: 100%;
+    }
+    .hero__container{
+      display: flex;
+      flex-direction: row-reverse;
+    }
+    .navbar{
+      padding:0 ;
+    }
+    .button__primary{
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      width: 30%;
+      height:20% ;
+     
+    }
+    .hero__text{
+      font-size: 3rem;
+      line-height: 1;
+    }
+    .video__footage__container{
+    position: relative;
+    display: flex;
+    /* flex-direction: row; */
+    
+  }
+  .food__menu__card__list {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-evenly;
+          padding-top: 2rem;
+          margin-top: 2rem;
+      }    
+      .food__menu__card {
+          flex-basis: 30%;
+          background-color: white;
+          border-radius: 6px;
+      }
+      .food__list__container {
+          position: relative;
+          margin: 5rem 0;
+      }
+      .recommendation__food__list{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 2rem;
+        margin-top: 2rem;
+      }
+     
